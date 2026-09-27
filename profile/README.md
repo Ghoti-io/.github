@@ -43,7 +43,7 @@ cd suite && ./clone.sh && ./install.sh
 | Library | What it is |
 | --- | --- |
 | [`cutil`](https://github.com/Ghoti-io/cutil) | Foundation utilities: containers, hash tables, a traced allocator, overflow-checked size math, threads and synchronisation |
-| [`security`](https://github.com/Ghoti-io/security) | Cryptographic primitives: hashes, MACs, key derivation, authenticated encryption, and the entropy call |
+| [`security`](https://github.com/Ghoti-io/security) | Cryptographic primitives: hashes, MACs, key derivation, authenticated encryption, key agreement, signatures, and the entropy call |
 | [`unicode`](https://github.com/Ghoti-io/unicode) | The Unicode Character Database as generated tables, plus the UAX algorithms over them |
 | [`chron`](https://github.com/Ghoti-io/chron) | Time: instants, civil dates, calendars, durations, time zones, and the text formats for all of them |
 | [`compress`](https://github.com/Ghoti-io/compress) | Streaming compression: deflate, gzip, lz4, lzw, rle, zstd, with crc32 and xxhash |
