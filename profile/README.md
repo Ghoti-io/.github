@@ -43,12 +43,15 @@ cd suite && ./clone.sh && ./install.sh
 | Library | What it is |
 | --- | --- |
 | [`cutil`](https://github.com/Ghoti-io/cutil) | Foundation utilities: containers, hash tables, a traced allocator, overflow-checked size math, threads and synchronisation |
+| [`security`](https://github.com/Ghoti-io/security) | Cryptographic primitives: hashes, MACs, key derivation, authenticated encryption, and the entropy call |
 | [`unicode`](https://github.com/Ghoti-io/unicode) | The Unicode Character Database as generated tables, plus the UAX algorithms over them |
 | [`chron`](https://github.com/Ghoti-io/chron) | Time: instants, civil dates, calendars, durations, time zones, and the text formats for all of them |
 | [`compress`](https://github.com/Ghoti-io/compress) | Streaming compression: deflate, gzip, lz4, lzw, rle, zstd, with crc32 and xxhash |
 | [`text`](https://github.com/Ghoti-io/text) | JSON, CSV, JSON Schema, streaming YAML, IDNA2008 and UTS #46 host names |
+| [`color`](https://github.com/Ghoti-io/color) | A colour engine: colour-space description, ICC profiles, and transforms between spaces |
 | [`image`](https://github.com/Ghoti-io/image) | Raster imaging: hand-written PNG/APNG, JPEG and BMP codecs, colour management, metadata |
 | [`model`](https://github.com/Ghoti-io/model) | 3D model formats: Wavefront OBJ geometry and MTL materials |
+| [`archive`](https://github.com/Ghoti-io/archive) | Archive containers: tar and zip, read and written as members and byte ranges without touching the filesystem |
 | [`regex`](https://github.com/Ghoti-io/regex) | Regular expressions across several dialects, over one parser and three engines |
 | [`ctang`](https://github.com/Ghoti-io/ctang) | Tang, a template language with an x86-64 JIT and a bytecode-VM fallback |
 | [`cjelly`](https://github.com/Ghoti-io/cjelly) | Vulkan-first cross-platform GUI toolkit that draws its own widgets |
