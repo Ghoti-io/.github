@@ -6,7 +6,40 @@ Dependency-light, cross-platform C libraries. C17, **LGPL-3.0-only**.
 
 This is the org page for the Ghoti.io suite of libraries.  They are my own collection of libraries that exist simply because I wanted to build them.  They are primariliy for my own projects, but you can use them, too... they are LGPL-3.
 
-### Puns
+## Start here
+
+**[`suite`](https://github.com/Ghoti-io/suite)** clones every library, builds them in dependency order, and renders the combined manual.
+
+### Very Quick Start
+
+```bash
+mkdir ghoti.io && cd ghoti.io
+git clone https://github.com/Ghoti-io/suite.git
+cd suite && ./clone.sh && ./install.sh
+```
+
+## The libraries
+
+| Library | What it is |
+| --- | --- |
+| [`cutil`](https://github.com/Ghoti-io/cutil) | The foundation the rest of the suite is built on: an allocator, containers, checked arithmetic, threads and synchronisation, and the filesystem |
+| [`security`](https://github.com/Ghoti-io/security) | Cryptographic primitives: hashes, MACs, key derivation, symmetric encryption, key agreement, signatures, password hashes, and the certificate encodings — DER, PEM, PKCS#8, PKCS#12, X.509, CRL and OCSP. No handshake lives here |
+| [`unicode`](https://github.com/Ghoti-io/unicode) | The Unicode Character Database as generated tables, and the algorithms the Standard Annexes define over them: properties, normalisation, case mapping, segmentation, bidi and character names |
+| [`chron`](https://github.com/Ghoti-io/chron) | Time: instants, civil dates, calendars, durations, time zones, and the text formats for all of them |
+| [`compress`](https://github.com/Ghoti-io/compress) | Streaming compression: deflate, zlib and gzip, plus LZ4, LZW, RLE and zstd, with crc32 and xxhash |
+| [`text`](https://github.com/Ghoti-io/text) | Structured text, each format with a document, a streaming parser and a writer: JSON (with Pointer, Path, Patch and Schema), CSV, YAML 1.2, TOML v1.0.0, and IDNA2008 and UTS #46 host names |
+| [`color`](https://github.com/Ghoti-io/color) | A colour engine: colour-space description, ICC profiles, and transforms between spaces. Deliberately not a colour *management* system. **Scaffolding only so far** — the phases are planned, not built |
+| [`image`](https://github.com/Ghoti-io/image) | Raster imaging as a multi-image document with metadata, colour information and operations: PNG and APNG, JPEG, BMP, GIF, and TIFF |
+| [`model`](https://github.com/Ghoti-io/model) | 3D model formats over a byte stream: Wavefront OBJ geometry and MTL materials, and STL in both spellings |
+| [`archive`](https://github.com/Ghoti-io/archive) | Archive containers, read and written **without touching the filesystem** — it hands you a member's name, size, time and bytes and never opens a file. Tar is read and written, zip is read, and `.tar.gz`, `.tar.zst` and `.tar.lz4` work both ways. No zip writer yet |
+| [`regex`](https://github.com/Ghoti-io/regex) | Regular expressions over one parser and three engines. Ten of seventeen dialects compile and match — ECMAScript, PCRE2, Perl, POSIX and GNU BRE and ERE, Python, Vim and I-Regexp — and the other seven are named and report unsupported |
+| [`ctang`](https://github.com/Ghoti-io/ctang) | Tang, a template language with an x86-64 JIT and a bytecode-VM fallback, which are required to agree |
+| [`cjelly`](https://github.com/Ghoti-io/cjelly) | Vulkan-first cross-platform GUI toolkit: native windows, its own renderer, a render graph per window, and it draws Wavefront models |
+| [`font`](https://github.com/Ghoti-io/font) | Fonts: sfnt and `ttcf` collections, `glyf` and CFF outlines with composites and CID-keyed fonts, cmap lookup and advances, rasterised to 8-bit coverage. Shaping, layout, variations and the bitmap formats are not built yet |
+
+Not every library is finished, and each repository's own README says where it stands. `suite` builds whatever is checked out.
+
+## Puns
 
 - "Ghoti" is pronounced "[Fish](https://en.wikipedia.org/wiki/Ghoti)".
   - I thought it was funny.
@@ -25,39 +58,6 @@ This is the org page for the Ghoti.io suite of libraries.  They are my own colle
     - A GUI ("gooey") Ghoti ("fish") in the .io ("Indian Ocean").  It's obviously a jellyfish.
     - `cjelly`... "[sea jelly](https://en.wikipedia.org/wiki/Jellyfish)"
     - I think I'm hilarious.
-
-## Start here
-
-**[`suite`](https://github.com/Ghoti-io/suite)** clones every library, builds them in dependency order, and renders the combined manual.
-
-### Very Quick Start
-
-```bash
-mkdir ghoti.io && cd ghoti.io
-git clone https://github.com/Ghoti-io/suite.git
-cd suite && ./clone.sh && ./install.sh
-```
-
-## The libraries
-
-| Library | What it is |
-| --- | --- |
-| [`cutil`](https://github.com/Ghoti-io/cutil) | Foundation utilities: containers, hash tables, a traced allocator, overflow-checked size math, threads and synchronisation |
-| [`security`](https://github.com/Ghoti-io/security) | Cryptographic primitives: hashes, MACs, key derivation, authenticated encryption, key agreement, signatures, and the entropy call |
-| [`unicode`](https://github.com/Ghoti-io/unicode) | The Unicode Character Database as generated tables, plus the UAX algorithms over them |
-| [`chron`](https://github.com/Ghoti-io/chron) | Time: instants, civil dates, calendars, durations, time zones, and the text formats for all of them |
-| [`compress`](https://github.com/Ghoti-io/compress) | Streaming compression: deflate, gzip, lz4, lzw, rle, zstd, with crc32 and xxhash |
-| [`text`](https://github.com/Ghoti-io/text) | JSON, CSV, JSON Schema, streaming YAML, IDNA2008 and UTS #46 host names |
-| [`color`](https://github.com/Ghoti-io/color) | A colour engine: colour-space description, ICC profiles, and transforms between spaces |
-| [`image`](https://github.com/Ghoti-io/image) | Raster imaging: hand-written PNG/APNG, JPEG and BMP codecs, colour management, metadata |
-| [`model`](https://github.com/Ghoti-io/model) | 3D model formats: Wavefront OBJ geometry and MTL materials |
-| [`archive`](https://github.com/Ghoti-io/archive) | Archive containers: tar and zip, read and written as members and byte ranges without touching the filesystem |
-| [`regex`](https://github.com/Ghoti-io/regex) | Regular expressions across several dialects, over one parser and three engines |
-| [`ctang`](https://github.com/Ghoti-io/ctang) | Tang, a template language with an x86-64 JIT and a bytecode-VM fallback |
-| [`cjelly`](https://github.com/Ghoti-io/cjelly) | Vulkan-first cross-platform GUI toolkit that draws its own widgets |
-| [`font`](https://github.com/Ghoti-io/font) | Fonts: reading, rasterisation, shaping and paragraph layout |
-
-Not every library is finished, and each repository's own README says where it stands. `suite` builds whatever is checked out.
 
 ## License
 
