@@ -114,6 +114,8 @@ Languages that run on the runtime.
 
 ### Defiant
 
+Defiant is a self-hosted web platform in the spirit of Drupal, written in C on the Ghoti.io suite. It is meant to keep working across upgrades, to lock no one in, and to be operable by AI. It is early: the first milestone covers writing a post, rearranging the front page, undoing a change, and erasing a person's data on request.
+
 #### Storage
 
 | Library | What it is |
