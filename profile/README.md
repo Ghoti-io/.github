@@ -132,7 +132,7 @@ Languages that run on the runtime.
 
 ### Vendored
 
-Third-party code kept as its own repository and built like the rest. It is not written here.
+Third-party code, kept as its own repository and built like the rest. It was not written by this project.
 
 | Library | What it is |
 | --- | --- |
