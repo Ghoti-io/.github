@@ -86,11 +86,7 @@ A family of libraries for 2D vector graphics that gives the same bits on every h
 
 ### Language and runtime
 
-#### Tang (deprecated)
-
-| Library | What it is |
-| --- | --- |
-| [`ctang`](https://github.com/Ghoti-io/ctang) | **Deprecated; use `lang-tang`.** Tang, a template language with an x86-64 JIT and a bytecode-VM fallback, which are required to agree |
+A language runtime shared by the suite's languages: an execution core, a garbage collector and a debugger, with bytecode interpretation and a JIT that runs on x86-64 and arm64.
 
 #### The runtime
 
@@ -111,6 +107,12 @@ Languages that run on the runtime.
 | --- | --- |
 | [`lang-tang`](https://github.com/Ghoti-io/lang-tang) | The Tang engine of the language runtime, replacing ctang: templates and scripts, an interpreter, and a baseline JIT through runtime-jit |
 | [`lang-wasm`](https://github.com/Ghoti-io/lang-wasm) | A WebAssembly 3.0 decoder, validator, translator, interpreter and baseline JIT, with a WAT and WAST parser. Still being filled in |
+
+#### Tang (deprecated)
+
+| Library | What it is |
+| --- | --- |
+| [`ctang`](https://github.com/Ghoti-io/ctang) | **Deprecated; use `lang-tang`.** Tang, a template language with an x86-64 JIT and a bytecode-VM fallback, which are required to agree |
 
 ### Defiant
 
