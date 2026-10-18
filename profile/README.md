@@ -86,11 +86,11 @@ A family of libraries for 2D vector graphics that gives the same bits on every h
 
 ### Language and runtime
 
-#### Tang
+#### Tang (deprecated)
 
 | Library | What it is |
 | --- | --- |
-| [`ctang`](https://github.com/Ghoti-io/ctang) | Tang, a template language with an x86-64 JIT and a bytecode-VM fallback, which are required to agree |
+| [`ctang`](https://github.com/Ghoti-io/ctang) | **Deprecated; use `lang-tang`.** Tang, a template language with an x86-64 JIT and a bytecode-VM fallback, which are required to agree |
 
 #### The runtime
 
@@ -121,7 +121,6 @@ Languages that run on the runtime.
 | [`defiant-storage`](https://github.com/Ghoti-io/defiant-storage) | A storage port for immutable revision documents, blobs, projection rows and outbox rows. A read sees the last commit; writes to one tenant are serializable |
 | [`defiant-storage-memory`](https://github.com/Ghoti-io/defiant-storage-memory) | The in-memory backend for defiant-storage. Committed bytes stay in the process |
 | [`defiant-storage-sqlite`](https://github.com/Ghoti-io/defiant-storage-sqlite) | The SQLite backend for defiant-storage: one database file per tenant, using vendor-sqlite |
-| [`vendor-sqlite`](https://github.com/Ghoti-io/vendor-sqlite) | SQLite 3.53.4, the official amalgamation, so more than one library can link the same pin. The public API is `sqlite3_*`, with no wrapper |
 
 #### Application
 
@@ -130,6 +129,14 @@ Languages that run on the runtime.
 | [`defiant-core`](https://github.com/Ghoti-io/defiant-core) | The Defiant kernel: a request context, a fiber scheduler, an offload pool and a yield watchdog, with the tenant carried on every request |
 | [`defiant-web`](https://github.com/Ghoti-io/defiant-web) | The HTTP adapter for Defiant: one listener, HTTP/1.1 in, and a call to defiant-core for the tenant, the session and the page, with a server-rendered admin |
 | [`defiant-test`](https://github.com/Ghoti-io/defiant-test) | The milestone harness for Defiant: tenant export and import, and the six gates that close milestone 1 — cross-tenant isolation, an access-filter bypass, erasure that survives restore, a memory-to-SQLite round trip, an unsafe-list lint and a scan for internal ids in rendered pages |
+
+### Vendored
+
+Third-party code kept as its own repository and built like the rest. It is not written here.
+
+| Library | What it is |
+| --- | --- |
+| [`vendor-sqlite`](https://github.com/Ghoti-io/vendor-sqlite) | SQLite 3.53.4, the official amalgamation, so more than one library can link the same pin. The public API is `sqlite3_*`, with no wrapper |
 
 ### Experimental
 
